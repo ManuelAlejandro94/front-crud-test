@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Front Crud Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Configuración
 
-## Available Scripts
+Versión de python utilizada: 3.8
+Versión de pip utilizada: 22.2.2
 
-In the project directory, you can run:
+* Colocarse dentro del directorio `front-crud-test`
+* Usando consola del SO de preferencia instalar los componentes necesarios:
+```
+$ npm install
+```
+En caso de encontrarse a través de un proxy:
+```
+$ npm config set proxy http://<username>:<password>@<proxy_server>:<port>
+$ npm install
+```
+* Editar `config.yml` con los datos de la BD de mongo
 
-### `npm start`
+_**NOTA:** La base de datos utilizada es mongo, con una única colección. El id de los datos proporcionados, está en bd como \_id_ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Despliegue de la aplicación en modo desarrollo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Consola
+Encontradose dentro de `backend-crud-test` usando la configuración por defecto:
+```
+npm start
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Que no incluye el aplicativo
+* Manejo de excepciones en las respuestas inesperadas del API.
+* Comprobación de parámetros a insertar/actualizar (longitudes, tipo de dato, etc)
+* Códigos de error específicos en las respuestas que tienen algún error.
+* Implementación de protocolos de autenticación como OAuth2
+* Protección contra inyección SQL en los campos
