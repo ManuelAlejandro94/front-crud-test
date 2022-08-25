@@ -2,8 +2,8 @@
 
 ## Configuración
 
-Versión de python utilizada: 3.8
-Versión de pip utilizada: 22.2.2
+Versión de node utilizada: v14.15.3
+Versión de npm utilizada: 6.14.9
 
 * Colocarse dentro del directorio `front-crud-test`
 * Usando consola del SO de preferencia instalar los componentes necesarios:
@@ -15,14 +15,14 @@ En caso de encontrarse a través de un proxy:
 $ npm config set proxy http://<username>:<password>@<proxy_server>:<port>
 $ npm install
 ```
-* Editar `config.yml` con los datos de la BD de mongo
+* Editar `.env` con la `base_url` necesaria para el consumo del API
 
 _**NOTA:** La base de datos utilizada es mongo, con una única colección. El id de los datos proporcionados, está en bd como \_id_ 
 
 ## Despliegue de la aplicación en modo desarrollo
 
 ### Consola
-Encontradose dentro de `backend-crud-test` usando la configuración por defecto:
+Encontradose dentro de `front-crud-test` usando la configuración por defecto:
 ```
 npm start
 ```
